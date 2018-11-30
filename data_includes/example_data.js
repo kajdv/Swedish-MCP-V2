@@ -133,7 +133,7 @@ PennController.FeedItems( myTable.filter("ExptType","Practice"),
                 getFunction("isIntermed")
                     .test.is(true)
                     .success( getText("instructionsText").settings.text("Det &auml;r f&ouml;rmodligen inte s&aring; l&auml;tt att f&ouml;rest&auml;lla dig n&auml;r man skulle kunna anv&auml;nda den h&auml;r meningen. Folk v&auml;ljer vanligtvis ett betyg n&aring;gonstan i mitten av skalan.") )
-                    .failure( getText("instructionsText").settings.text("Oberoende av situationen skulle du nog inte anv&auml;nda den h&auml;r meningen. Folk v&auml;ljer vanligtvis ett `l&aring; betyg':") )
+                    .failure( getText("instructionsText").settings.text("Oberoende av situationen skulle du nog inte anv&auml;nda den h&auml;r meningen. Folk v&auml;ljer vanligtvis ett `l&aring;gt betyg':") )
             )
         ,            
         getText("instructionsText")
