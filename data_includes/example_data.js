@@ -247,6 +247,7 @@ PennController.FeedItems( myTable.filter("Expt","experiment-first"),
    // .log("V2_Stims", item.V2_Stims)  
    //.log("SpActAdv_Stims", item.SpActAdv_Stims)           
     .log("source", PennController.GetURLParameter("source"))
+    .log("PROLIFIC_PID", PennController.GetURLParameter("PROLIFIC_PID"))
 );
 
 PennController.FeedItems( myTable.filter("Expt","experiment"),
@@ -255,7 +256,7 @@ PennController.FeedItems( myTable.filter("Expt","experiment"),
             .start()
             .wait()
         ,    
-        newTooltip("instructions", "Klicka på mellanslagstangenten f&ouml;r att forts&auml;tta.")
+        newTooltip("instructions", "Klicka p&aring; mellanslagstangenten f&ouml;r att forts&auml;tta.")
             .settings.size(180, 25)
             .settings.position("bottom center")
             .settings.key(" ", "no click")
@@ -325,5 +326,6 @@ PennController.FeedItems( myTable.filter("Expt","experiment"),
    // .log("InSitu_Stims", item.InSitu_Stims)     
    // .log("V2_Stims", item.V2_Stims)  
    // .log("SpActAdv_Stims", item.SpActAdv_Stims)           
-    .log("source", PennController.GetURLParameter("source")) 
+    .log("source", PennController.GetURLParameter("source"))
+    .log("PROLIFIC_PID", PennController.GetURLParameter("PROLIFIC_PID")) 
 );
