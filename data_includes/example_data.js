@@ -81,15 +81,15 @@ var items = [
     ["send", "__SendResults__", {}]   
     ,
     ["prolificConf", "PennController", PennController(
-        newHtml("thanks", "ProlificConfirmation.html")
+        newHtml("thanks", (PennController.GetURLParameter('id')=='undefined'?"Thanks.html":"ProlificConfirmation.html"))
             .settings.log()
-            .print()
+            .print() 
         ,
         newButton("continue btn", "Jag &auml;r klar.")
             .settings.bold()
      //       .print()
             .wait()                 
-    )]                     
+    )]                      
 ];
 //PennController.GetTable( "SW-datasource-MCP.csv" ).setLabel("Expt");
 var myTable = PennController.GetTable("SW-datasource-MCP.csv" ).setLabel("Expt");
@@ -247,7 +247,7 @@ PennController.FeedItems( myTable.filter("Expt","experiment-first"),
    // .log("V2_Stims", item.V2_Stims)  
    //.log("SpActAdv_Stims", item.SpActAdv_Stims)           
     .log("source", PennController.GetURLParameter("source"))
-    .log("PROLIFIC_PID", PennController.GetURLParameter("PROLIFIC_PID"))
+    .log("PROLIFIC_PID", PennController.GetURLParameter("id")) 
 );
 
 PennController.FeedItems( myTable.filter("Expt","experiment"),
@@ -327,5 +327,5 @@ PennController.FeedItems( myTable.filter("Expt","experiment"),
    // .log("V2_Stims", item.V2_Stims)  
    // .log("SpActAdv_Stims", item.SpActAdv_Stims)           
     .log("source", PennController.GetURLParameter("source"))
-    .log("PROLIFIC_PID", PennController.GetURLParameter("PROLIFIC_PID"))
+    .log("PROLIFIC_PID", PennController.GetURLParameter("id")) 
 );
