@@ -20,13 +20,13 @@ var items = [
     )]
     ,
     ["instructions", "PennController", PennController(
-//        newHtml("instructions form", "TaskInstructionsUnmarked.html") 
-        newHtml("instructions form", "TaskInstructionsV2.html") 
-//        newHtml("instructions form", "TaskInstructionsSpAct.html") 
+//        newHtml("instructions form", "TaskInstructionsUnmarked.html")
+        newHtml("instructions form", "TaskInstructionsV2.html")
+//        newHtml("instructions form", "TaskInstructionsSpAct.html")
 
             .print()
         ,
-        newButton("continue btn", "Klicken Sie f&uuml;r weitere Anweisungen.")
+        newButton("continue btn", "Klicka h&auml;r f&ouml;r att g&aring; vidare.")
             .print()
             .wait()
     )]
@@ -65,7 +65,7 @@ var items = [
         newButton("continue btn", "G&aring; vidare.")
             .print()
             .wait( getHtml("distract form").test.complete().failure(getHtml("distract form").warn()) )
-    )] 
+    )]
     ,      
 //    ["feedback", "PennController", PennController(
  //       newHtml("feedback form", "ProlificFeedback.html")
@@ -83,7 +83,7 @@ var items = [
     ["prolificConf", "PennController", PennController(
         newHtml("thanks", "ProlificConfirmation.html")
             .settings.log()
-            .print() 
+            .print()
         ,
         newButton("continue btn", "Jag &auml;r klar.")
             .settings.bold()
@@ -157,10 +157,10 @@ PennController.FeedItems( myTable.filter("ExptType","Practice"),
             )
         ,    
         newCanvas("ansbox", 730, 120)
-            .settings.add(25,25, newText("background", "F&ouml;r mig l&aring;ter den h&auml;r meningen").settings.size(700, 30) )   
-            .settings.add( 25,75, newText("labelLeft", "fullkomligt onaturlig").settings.bold() )
-            .settings.add(195,70, getScale("answer").settings.size(200, 0) )
-            .settings.add(425,75, newText("labeRight", "helt naturlig.").settings.bold() )
+            .settings.add(25,25, newText("background", "Den h&auml;r meningen l&aring;ter:").settings.size(700, 30) )   
+            .settings.add(25,75, newText("labelLeft", "helt onaturlig").settings.bold() )
+            .settings.add(120,70, getScale("answer").settings.size(200, 0) )
+            .settings.add(352,75, newText("labeRight", "helt naturlig.").settings.bold() )
             .print()
         ,        
         newButton("validate", "G&aring; vidare.")
@@ -176,7 +176,7 @@ PennController.FeedItems( myTable.filter("Expt","experiment-first"),
             .start()
             .wait()
         ,    
-        newTooltip("instructions", "Klicka på mellanslagstangenten f&ouml;r att forts&auml;tta.")
+        newTooltip("instructions", "Klicka p&aring; mellanslagstangenten f&ouml;r att forts&auml;tta.")
             .settings.size(180, 25)
             .settings.position("bottom center")
             .settings.key(" ", "no click")
@@ -207,10 +207,10 @@ PennController.FeedItems( myTable.filter("Expt","experiment-first"),
             .settings.log()
         ,
         newCanvas("ansbox", 730, 120)
-            .settings.add(25,25, newText("background", "F&ouml;r mig l&aring;ter den h&auml;r meningen").settings.size(700, 30) )   
-            .settings.add( 25,75, newText("labelLeft", "fullkomligt onaturlig").settings.bold() )
-            .settings.add(195,70, getScale("answer").settings.size(200, 0) )
-            .settings.add(425,75, newText("labeRight", "helt naturlig.").settings.bold() )
+            .settings.add(25,25, newText("background", "Den h&auml;r meningen l&aring;ter:").settings.size(700, 30) )   
+            .settings.add(25,75, newText("labelLeft", "helt onaturlig").settings.bold() )
+            .settings.add(120,70, getScale("answer").settings.size(200, 0) )
+            .settings.add(352,75, newText("labeRight", "helt naturlig.").settings.bold() )
             .print()
         ,   
         newText("warning","Var god v&auml;lj ett svar.")
@@ -221,7 +221,7 @@ PennController.FeedItems( myTable.filter("Expt","experiment-first"),
             .print()
         ,
         newButton("validate", "G&aring; vidare.")
-            .settings.center() 
+            .settings.center()
             .print()    
             .wait(getScale("answer")
                   .test.selected()
@@ -286,11 +286,11 @@ PennController.FeedItems( myTable.filter("Expt","experiment"),
         newScale("answer", 9)
             .settings.log()
         ,
-         newCanvas("ansbox", 730, 120)
-            .settings.add(25,25, newText("background", "F&ouml;r mig l&aring;ter den h&auml;r meningen").settings.size(700, 30) )   
-            .settings.add( 25,75, newText("labelLeft", "fullkomligt onaturlig").settings.bold() )
-            .settings.add(195,70, getScale("answer").settings.size(200, 0) )
-            .settings.add(425,75, newText("labeRight", "helt naturlig.").settings.bold() )
+        newCanvas("ansbox", 730, 120)
+            .settings.add(25,25, newText("background", "Den h&auml;r meningen l&aring;ter:").settings.size(700, 30) )   
+            .settings.add(25,75, newText("labelLeft", "helt onaturlig").settings.bold() )
+            .settings.add(120,70, getScale("answer").settings.size(200, 0) )
+            .settings.add(352,75, newText("labeRight", "helt naturlig.").settings.bold() )
             .print()
         ,   
         newText("warning","Var god v&auml;lj ett svar.")
@@ -301,7 +301,7 @@ PennController.FeedItems( myTable.filter("Expt","experiment"),
             .print()
         ,
         newButton("validate", "G&aring; vidare.")
-            .settings.center() 
+            .settings.center()
             .print()    
             .wait(getScale("answer")
                   .test.selected()
@@ -327,5 +327,5 @@ PennController.FeedItems( myTable.filter("Expt","experiment"),
    // .log("V2_Stims", item.V2_Stims)  
    // .log("SpActAdv_Stims", item.SpActAdv_Stims)           
     .log("source", PennController.GetURLParameter("source"))
-    .log("PROLIFIC_PID", PennController.GetURLParameter("PROLIFIC_PID")) 
+    .log("PROLIFIC_PID", PennController.GetURLParameter("PROLIFIC_PID"))
 );
